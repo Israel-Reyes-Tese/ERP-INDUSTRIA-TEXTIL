@@ -53,18 +53,20 @@ Verificar la correcta instalación mediante el acceso a la interfaz de usuario d
 
 ## Screenshots
     INICIO DEL SISTEMA
-![IMAGENES DEL SISTEMA](https://cnkrvq.dm.files.1drv.com/y4mIN-14ulcYInHJk9Qv9PrA8UTI3lsbChCumSjqzdZBpkz435HUusTOw-xpYIkHe5aEPOB6jYF7SoSn4hp7ScyjB_PACavG_ca1v5R28e_FzgOH2Lq23ZwcwD-0bizIf3us-JKHc2-6Cc6T39Cw4dWM2PkRAiCinBYQCSPk5r4JsgmVBw90fYIaxNJyg7kcw_dTQaEy9JeMNNOMGUxi1wNuzMfCSItNU2gXK9UT5k9oqE)
+![IMAGENES DEL SISTEMA](https://github.com/user-attachments/assets/5ec83a60-3ca2-46b0-ab63-bc80c61f1c8f)
 
 
 ## MENU DE NAVEGACION
-![IMAGENES DEL SISTEMA](https://cnkrvq.dm.files.1drv.com/y4mGKqfZyTDpyXRJBZtwv1rOvQ55gO-gq3bK-LTm_N-dkIs7zQylsf6A2-8S6C5ha687-b0Mtkus5QAMZVFx6w5VkExoswhboC-CIYixlxii3ZEoj4vk2xB36AZ9X3YaR5zK1FDV4AE7JSUdFnShPJaIRE8munjs4rxhZdLUDlcL2E8au5PjsMLVuAsubkTXXu7hTpwhzIuK-GwL3WMRGO-CjK8bGTFcwmaPIyNKEEjyTw)
+![IMAGENES DEL SISTEMA](https://github.com/user-attachments/assets/4c9bf700-f406-45ae-ba52-234f01ab8088)
 
 ## SUBMODULOS
-![IMAGENES DEL SISTEMA](https://cniqgw.dm.files.1drv.com/y4mD2omLofx8IYAcl_3Xd_m2-cdUMVSdjneYkbA20chjM6eMcwPsMTZOMTBN1Hdz9yJQq2US4PvEQozzLkmkQyiDsvx65JsKlr3G6lmR4R4ZY-mYe9lNiekmh5RJ6SUBpV4PHCn0_f666-XefwGEChGGiwxQbk8PJZ4SIOQ47ZjG-FoxfVxL5VCByLA1AytXWNKLyrOwVOHmvxYdRvXY5x5EvDp0kEh3cFh5Dm-nR9q4NY)
+![IMAGENES DEL SISTEMA](https://github.com/user-attachments/assets/d063f2cf-8d71-4403-835f-3701a040cd6e)
+
 
 ## CONSULTA DE INFORMACION
 
-![IMAGENES DEL SISTEMA](https://cnkkdg.dm.files.1drv.com/y4maRGnuTbsNYvUhnnCrFMiCjRxthc8_M_dpfxBKjoUxa0CRSsnA4RIQgXIyZ7PliyL8RJC5qSCXv6RgrXRsND0P1PBl8lDuAcjf_TnWJpxQaa4HPFPWhSItUhtiYdKOldxNJqX5yAYKBXpzInYzOWxzOgodbrtEA2Zy04dlIhS6uI-BPcDWrW-DOgE-1BvEMj5mOAs0Px_GkMpYumSU8JtfLhy1PcMyk7nAY8qaZdO7Po)
+![IMAGENES DEL SISTEMA](https://github.com/user-attachments/assets/d176c0b6-4dff-4656-9e6c-02f8a17f667c)
+
+[TODAS LAS IMAGENES](https://github.com/user-attachments/assets/57d1153c-538b-4588-a496-d418fabb51a1)
 
 
-[TODAS LAS IMAGENES](https://1drv.ms/b/s!Agph79C0EmBLdqo6IoajHy0YjT4?e=HZ3fDA)
