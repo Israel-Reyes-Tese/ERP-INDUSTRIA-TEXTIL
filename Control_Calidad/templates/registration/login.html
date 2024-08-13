@@ -1,0 +1,41 @@
+{% extends 'Index.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+    {% block css %}
+        <link rel="stylesheet" href="{% static 'css/Style_Login.css' %}">
+    {% endblock %}
+{% block contenido %}
+{% load humanize %} 
+ <div class="sing-log-wrap">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                    <div class="form-area">
+                        <div class="form-sing">
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active"><a href="#login" aria-controls="Log In" role="tab" data-toggle="tab">INICIAR SESION</a></li>
+                            </ul>
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active form-are" id="login">
+                                    <form action= "" class="ayuda" id="ayuda" method="POST" >{% csrf_token %}
+                                        <div class="form-bor">
+                                            <div class="form-input-group">
+                                            {{ form | crispy }}
+                                            <button type="submit" id="Enviar" class="button">Enviar</button>
+                                        </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+    {% block js %}    
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+<script src="{% static 'javascript/Login.js' %}"></script>
+    {% endblock %}

@@ -1,0 +1,125 @@
+    <!DOCTYPE html>
+    <html lang="es">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ERP DE INDUSTRIA TEXTIL</title>
+    {% load static %}
+    {% block css %}
+    {% endblock %}
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/BackGroun_Sakura.css' %}">
+    <link rel="stylesheet" href="{% static 'css/Style.css' %}">
+    <link rel="stylesheet" href="sweetalert2.min.css">
+<nav>
+        <div id="logo">ERP</div>
+        <label for="drop" class="toggle">Menu</label>
+        <input type="checkbox" id="drop" />
+            <ul class="menu">
+                <li><a href="{% url '' %}">INICIO</a></li>
+                
+                <li>    
+                    <!-- INICIO -->
+                    <label for="drop-1" class="toggle">RECURSOS HUMANOS</label>
+                    <a href="#">RECURSOS HUMANOS</a>
+                    <input type="checkbox" id="drop-1"/>
+                    <ul>
+                        <li><a href="#">SELECCION</a></li>
+                        <li><a href="#">CONTRATACION</a></li>
+                        <li><a href="#">CAPACITACION</a></li>
+                        <li><a href="{% url 'Empleados_Inicio_View' %}">EMPLEADOS</a></li>
+                    </ul> 
+                </li>
+                <li>
+                     <li>
+                    <!-- INICIO -->
+                    <label for="drop-1" class="toggle">PRODUCCION</label>
+                    <a href="#">PRODUCCION</a>
+                    <input type="checkbox" id="drop-1"/>
+                    <ul>
+                        <li><a href="#">PATRONES</a></li>
+                        <li><a href="#">INSUMOS</a></li>
+                        <li><a href="#">PRODUCTO TERMINADO</a></li>
+                    </ul> 
+                </li>
+                <li>
+                     <li>
+                    <!-- INICIO -->
+                    <label for="drop-1" class="toggle">CALIDAD</label>
+                    <a href="{% url 'Inicio_Calidad' %} ">CALIDAD</a>
+                    <input type="checkbox" id="drop-1"/>
+                    <ul>
+                        <li><a href="{% url 'Control_de_Lotes_Inicio_view' %}">CONTROL DE LOTES</a></li>
+                        <li><a href="{% url 'Pruebas_Inicio_view' %}">PRUEBAS</a></li>
+                        <li><a href="{% url 'Liberacion_Inicio_view' %}">LIBERACION</a></li>
+                    </ul> 
+                </li>
+                <li>
+                                    <!-- INICIO -->
+                    <label for="drop-1" class="toggle">COMPRAS</label>
+                    <a href="#">COMPRAS</a>
+                    <input type="checkbox" id="drop-1"/>
+                    <ul>
+                        <li><a href="#">INSUMOS</a></li>
+                        <li><a href="#">PROVEEDORES</a></li>
+                        <li><a href="#">CALIFICACION DE PROVEEDORES</a></li>
+                    </ul>   
+                </li>
+                <li>    
+                               <!-- INICIO -->
+                    <label for="drop-1" class="toggle">ALMACEN</label>
+                    <a href="{% url 'Almacenes_Inicio_view' %}">ALMACEN</a>
+                    <input type="checkbox" id="drop-1"/>
+                    <ul>
+                        <li><a href="{% url 'Productos_Inicio_view' %}">PRODUCTOS</a></li>
+                    </ul>   
+                </li>
+                <li>
+                
+    {% if user.is_authenticated %}  
+          <li>
+           <label for="drop-3" class="toggle" >CERRAR SESION</label>
+           <a href="{% url 'logout' %}">CERRAR SESION</a>
+           </li>  
+           {% else %}
+            <li>
+           <label for="drop-3" class="toggle" >INICIAR SESION</label>
+           <a href="{% url 'login' %}">INICIAR SESION</a>
+           </li>  
+           {% endif %}
+           
+            </li>       
+            </ul>      
+        </nav>    
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script>
+$(window).load(function () {
+    $('body').sakura();
+});
+</script>
+
+{% block contenido %}
+   {% endblock %}
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+<script src="{% static 'javascript/BackGroun_Sakura.js' %}"></script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="{% static 'javascript/Eliminar.js' %}"></script>  
+
+{% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+        <script>
+              Swal.fire({
+              "title": "Aviso",
+              "text": "{{message}}" ,
+              "icon": "success",
+              "confirmButtonText": "Cool"
+                })
+        </script>
+    {% endfor %}
+</ul>
+{% endif %}

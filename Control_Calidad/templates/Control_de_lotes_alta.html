@@ -1,0 +1,56 @@
+{% extends 'Index.html' %}
+{% load static %}
+{% csrf_token %}
+{% load crispy_forms_tags %}
+    {% block css %}
+    {% endblock %}
+{% block contenido %}
+{% load humanize %} 
+<br>
+<br>
+ <div class="sing-log-wrap">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                    <div class="form-area">
+                        <div class="form-sing">
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active"><a href="#login" aria-controls="Log In" role="tab" data-toggle="tab">CONTROL DE LOTES ALTA</a></li>
+                            </ul>
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active form-are" id="login">
+                                    <form action= "" class="ayuda" id="ayuda" method="POST" >{% csrf_token %}
+                                        <div class="form-bor">
+                                            <div class="form-input-group">
+                                            {{ form | crispy }}
+                                            <br>
+                                            <button type="submit" id="Enviar" class="button">GUARDAR</button>
+                                        </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+   {% if messages %}
+       {% for i in messages %}     
+       {{i}}
+     <script>
+        Swal.fire({
+        "text":"{{i}}",
+        })
+    </script> 
+       {% endfor %}  
+   {% endif %}
+   
+{% endblock %}
+
+
+{% block js %}   
+ {% endblock %}

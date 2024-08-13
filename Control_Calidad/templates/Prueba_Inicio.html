@@ -1,0 +1,49 @@
+{% extends 'Index.html' %}
+{% load static %}
+{% csrf_token %}
+{% load crispy_forms_tags %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/Menu_Inicio.css' %}">
+{% endblock %}
+{% block contenido %}
+{% load humanize %} 
+<h69>CONTROL DE PRUEBAS</h69>
+<div class="wrapper">
+  <div class="box">
+    <div class="description">
+      <h2>AGREGAR UN REGISTRO</h2>
+      <p></p>
+      <ul class="list">
+        <li><a href="{% url 'Pruebas_alta_view' %}" rel="noopener noreferrer"><i class="fas fa-plus"></i></a></li>
+        <li><a href=""><i class="fas fa-trash"></i></a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="box">
+    <div class="description">
+      <h2>LISTAR REGISTROS DE PRUEBAS</h2>
+      <p></p>
+      <ul class="list">
+        <li><a href="{% url 'Prueba_Consulta_View' %}" rel="noopener noreferrer"><i class="fas fa-plus"></i></a></li>
+        <li><a href=""><i class="fas fa-trash"></i></a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="box">
+    <div class="description">
+      <h2>MODIFICAR E ELIMINAR PRUEBAS</h2>
+      <p></p>
+      <ul class="list">
+        <li><a href="{% url 'Pruebas_Modificar_Eliminar_view' %}" rel="noopener noreferrer"><i class="fas fa-plus"></i></a></li>
+        <li><a href=""><i class="fas fa-trash"></i></a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
+    {% block js %}   
+<script src="https://kit.fontawesome.com/bad7f7f5d4.js" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+<script src="{% static 'javascript/Menu_inicio.js' %}"></script>
+      {% endblock %}

@@ -1,0 +1,73 @@
+{% extends 'Index.html' %}
+{% load static %}
+{% csrf_token %}
+{% load crispy_forms_tags %}
+    {% block css %}
+ <link rel="stylesheet" href="{% static 'css/Menu_de_busqueda.css' %}">
+  <link rel="stylesheet" href="{% static 'css/Style_Table.css' %}">
+
+    {% endblock %}
+{% block contenido %}
+{% load humanize %} 
+
+<br>
+<br>
+ <div class="sing-log-wrap">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                    <div class="form-area">
+                        <div class="form-sing">
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active"><a href="#login" aria-controls="Log In" role="tab" data-toggle="tab">CONSULTA DE REGISTROS</a></li>
+                            </ul>
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active form-are" id="login">
+                                    <form action= "" class="ayuda" id="ayuda" method="POST" >{% csrf_token %}
+                                        <div class="form-bor">
+                                            <div class="form-input-group">
+                                            <br>
+                                            {{Filtros_Orde.form}}
+                                            <br>
+                                            <button type="submit" id="Enviar" class="button">CONSULTA</button>
+                                        </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+ <hr>      
+ 
+ <h1><span></span>REGISTROS<span></span><span> EMPLEADOS</pan></h1>
+    <table class="container">
+	<thead>
+		<tr>
+			<th><h1tab>Numero Empleado</h1tab></th>
+			<th><h1tab>Nombre</h1tab></th>
+			<th><h1tab>Apellido</h1tab></th>
+			<th><h1tab>Puesto</h1tab></th>
+			<th><h1tab>Fecha Registro</h1tab></th>
+		</tr>
+	</thead>
+	<tbody>
+			{% for i in Orden %}
+		<tr>
+			<td>{{i.Numero_empleado}}</td>
+			<td>{{i.Nombre_empleado}}</td>
+			<td>{{i.Apellido_empleado}}</td>
+			<td>{{i.Puesto_empleado}}</td>
+			<td>{{i.Fecha_registro}}</td>
+		</tr>
+					{% endfor %}
+
+	</tbody>
+</table>
+
+{% endblock %}
+    {% block js %}   
+      {% endblock %}

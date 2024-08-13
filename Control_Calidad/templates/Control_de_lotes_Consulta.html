@@ -1,0 +1,76 @@
+{% extends 'Index.html' %}
+{% load static %}
+{% csrf_token %}
+{% load crispy_forms_tags %}
+    {% block css %}
+ <link rel="stylesheet" href="{% static 'css/Menu_de_busqueda.css' %}">
+  <link rel="stylesheet" href="{% static 'css/Style_Table.css' %}">
+    {% endblock %}
+{% block contenido %}
+{% load humanize %} 
+
+<br>
+<br>
+ <div class="sing-log-wrap">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                    <div class="form-area">
+                        <div class="form-sing">
+                            <ul class="nav nav-tabs" role="tablist">
+
+                                <li role="presentation" class="active"><a href="#login" aria-controls="Log In" role="tab" data-toggle="tab">CONSULTA DE LOTES</a></li>
+                            </ul>
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active form-are" id="login">
+                                    <form action= "" class="ayuda" id="ayuda" method="POST" >{% csrf_token %}
+                                        <div class="form-bor">
+                                            <div class="form-input-group">
+                                            <br>
+                                            {{Filtros_Orde.form}}
+                                            <br>
+                                            <button type="submit" id="Enviar" class="button">CONSULTA</button>
+                                        </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+ <hr>      
+ <a href="{% url 'Control_de_Lotes_Consulta_View' %}"><h1><span></span>INCIO <span></span><span> <i class="fas fa-home"></i></pan></h1></a>
+ <h1><span></span>REGISTROS <span></span><span>CONTROL DE LOTES</pan></h1>
+    <table class="container">
+	<thead>
+		<tr>
+			<th><h1tab>Numero de pedido</h1tab></th>
+			<th><h1tab>Encargado de lotes</h1tab></th>
+			<th><h1tab>Productos</h1tab></th>
+			<th><h1tab>Almacen</h1tab></th>		
+			<th><h1tab>Detalles</h1tab></th>				
+		</tr>
+	</thead>
+	<tbody>
+			{% for i in Orden %}
+		<tr>
+			<td>{{i.Numero_de_Pedio_Calidad}}</td>
+			<td>{{i.Encargado_de_control_lotes}}</td>
+			<td>
+			{% for p in i.Productos.all %}
+			"{{  p.Nombre  }}"
+			{% endfor %}
+			</td>
+			<td>{{i.Almacen_alojado}}</td>
+			<td><a href="{% url 'Control_de_Lotes_Modificar_view' i.id %}"><button>MAS DETALLES</button></a></td>
+		</tr>
+					{% endfor %}
+	</tbody>
+</table>
+
+{% endblock %}
+    {% block js %}   
+      {% endblock %}

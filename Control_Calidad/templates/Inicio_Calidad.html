@@ -1,0 +1,43 @@
+{% extends 'Index.html' %}
+{% load static %}
+{% csrf_token %}
+{% load crispy_forms_tags %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/Style_Calidad.css' %}">
+{% endblock %}
+{% block contenido %}
+{% load humanize %} 
+<br>
+<br>
+<div class="contenedor_logo">
+<figure class="snip1104 red">
+    <a href="{% url 'Control_de_Lotes_Inicio_view' %}">
+  <img src="https://i.pinimg.com/564x/ff/43/1e/ff431e482adf74e8bcf57ad96a8b2456.jpg" alt="sample33" width="440" height="320" />
+  <figcaption>
+    <h2>Control<span> Lotes</span></h2>
+  </figcaption>
+  </a>
+</figure>
+<figure class="snip1104">
+   <a href=" {% url 'Pruebas_Inicio_view' %} ">
+  <img src="https://i.pinimg.com/564x/f6/30/95/f6309577c8c25f78069e16c79c73f6b6.jpg" alt="sample33" width="440" height="320" />
+  <figcaption>
+    <h2>Pruebas <span> Calidad</span></h2>
+  </figcaption>
+  </a>
+</figure>
+<figure class="snip1104">
+<a href="{% url 'Liberacion_Inicio_view' %}">
+  <img src="https://i.pinimg.com/564x/13/be/d9/13bed911377d1fbb6027a64f307fa39f.jpg" alt="sample33" width="440" height="320" />
+  <figcaption>
+    <h2>Liberacion <span> Productos</span></h2>
+  </figcaption>
+    </a>
+</figure>
+</div>
+    {% endblock %}
+    {% block js %}   
+<script src="https://kit.fontawesome.com/bad7f7f5d4.js" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+<script src="{% static 'javascript/Cards.js' %}"></script>
+      {% endblock %}
